@@ -1,0 +1,27 @@
+{
+  "name": "node_crud",
+  "version": "1.0.0",
+  "description": "A Simple CRUD backend in node.js to test sending various types of requests.",
+  "main": "server.js",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yifanl1/node_crud.git"
+  },
+  "author": "Yifan Lu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yifanl1/node_crud/issues"
+  },
+  "homepage": "https://github.com/yifanl1/node_crud#readme"
+}
