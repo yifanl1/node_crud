@@ -1,15 +1,28 @@
 # node_crud
-Simple CRUD app in node.js
+A Simple CRUD backend in node.js
 
+
+## requirements
+`mongodb` must be installed, instructions found [here](https://docs.mongodb.com/manual/administration/install-community/)
+run mongo with `mongod`
+
+## installation
+clone into a local directory
+
+## running
 run with `node server.js`
 
-Get requests are done at `localhost:4000/api/getAllWithCustomerId/:customerId` and `http://localhost:4000/api/get/:id`
+`GET` requests are done at `localhost:4000/api/getAllWithCustomerId/:customerId` and `http://localhost:4000/api/get/:id`
 
-Remove an entry with `localhost:4000/api/remove/:id`
+`DELETE` an entry with `localhost:4000/api/remove/:id`
 
-To create an entry, use `localhost:4000/api/create` and send as a form body
-I tested this through Postman.
+To create an entry, `POST` to `localhost:4000/api/create`
+
+Testing this can be done with Postman, sending the request in a form body.
+![Example POST request](https://i.imgur.com/wDqo1jk.png)
 
 There is also an api link to handle updates with a PUT, requests also sent as form bodies.
+
+
 
 repo at `https://github.com/yifanl1/node_crud`
