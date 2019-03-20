@@ -12,15 +12,15 @@ exports.createAd = function (req, res, next) {
 
     Ads.create(ad, function(err, ad) {
         if (err) {
-            res.json({
-                error : err
-            })
+            res.status(400)
+                .json(err)
             return;
         }
 
-        res.json({
-            message : "Ad created successfully"
-        })
+        res.status(201)
+            .json({
+                message : "Ad created successfully"
+            })
     })
 }
 
@@ -34,30 +34,30 @@ exports.getAllWithCustomerId = function(req, res, next) {
 
     Ads.getAllWithCustomerId({customerId: req.query.customerId}, function(err, ads) {
         if (err) {
-            res.json({
-                error: err
-            })
+            res.status(400)
+                .json(err);
             return;
         }
 
-        res.json({
-            ads: ads
-        })
+        res.status(200)
+            .json({
+                ads: ads
+            });
     })
 }
 
 exports.getAd = function(req, res, next) {
     Ads.get(req.params.id, function(err, ad) {
         if (err) {
-            res.json({
-                error: err
-            })
+            res.status(400)
+                .json(err);
             return;
         }
 
-        res.json({
-            ad: ad
-        })
+        res.status(200)
+            .json({
+                ad: ad
+            });
     })
 }
 
@@ -73,29 +73,29 @@ exports.updateAd = function(req, res, next) {
 
     Ads.update(req.params.id, hero, function(err, ad) {
         if (err) {
-            res.json({
-                error : err
-            })
+            res.status(400)
+                .json(err);
             return;
         }
 
-        res.json({
-            message : "Ad updated successfully"
-        })
+        res.status(200)
+            .json({
+                message : "Ad updated successfully"
+            })
     })
 }
 
 exports.removeAd = function(req, res, next) {
     Ads.delete(req.params.id, function(err, ad) {
         if (err) {
-            res.json({
-                error : err
-            })
+            res.status(404)
+                .json(err)
             return;
         }
         
-        res.json({
-            message : "Ad deleted successfully"
-        })
+        res.status(204)
+            .json({
+                message : "Ad deleted successfully"
+            })
     })
 }
