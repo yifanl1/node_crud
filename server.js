@@ -17,7 +17,7 @@ db();
 // configure app.use()
 app.use(log);
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 // Error handling
 app.use(function(req, res, next) {
@@ -30,7 +30,6 @@ app.use(function(req, res, next) {
 
 // use express router
 app.use('/api',router);
-//call heros routing
 adsRoutes(router);
 
 // intialise server
