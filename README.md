@@ -13,16 +13,16 @@ clone into a local directory
 ## running
 run with `node server.js`
 
-`GET` requests are done at `localhost:4000/api/getAllWithCustomerId/:customerId` and `http://localhost:4000/api/get/:id`
+`GET` requests are done at `localhost:4000/api/ads?customerId=:customerId` and `http://localhost:4000/api/ads/:id`
 
-`DELETE` an entry with `localhost:4000/api/remove/:id`
+`DELETE` an entry with `localhost:4000/api/ads/:id`
 
-To create an entry, `POST` to `localhost:4000/api/create`
+To create an entry, `POST` to `localhost:4000/api/ads`
 
-Testing this can be done with Postman, sending the request in a form body.
-![Example POST request](https://i.imgur.com/wDqo1jk.png)
+Testing this can be done with Postman, sending the request in a form body or as a JSON.
+![Example POST request](https://i.imgur.com/N9XbNBK.png)
 
-There is also an api link at `localhost:4000/api/update/:id` to handle updates with a PUT, requests also sent as form bodies.
+There is also an api method to send a `PUT` request to `localhost:4000/api/ads/:id`
 
 
 
